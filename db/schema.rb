@@ -11,7 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150403055513) do
+ActiveRecord::Schema.define(version: 20150403063108) do
+
+  create_table "invs", force: true do |t|
+    t.string   "quotation_reference"
+    t.string   "item_name"
+    t.decimal  "price"
+    t.integer  "quantity"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "quotations", force: true do |t|
     t.string   "company_name"

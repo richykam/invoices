@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  quotation_reference: MyString
+  item_name: MyString
+  price: 9.99
+  quantity: 1
+
+two:
+  quotation_reference: MyString
+  item_name: MyString
+  price: 9.99
+  quantity: 1

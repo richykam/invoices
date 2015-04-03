@@ -1,0 +1,31 @@
+<h1>Listing invs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Quotation reference</th>
+      <th>Item name</th>
+      <th>Price</th>
+      <th>Quantity</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @invs.each do |inv| %>
+      <tr>
+        <td><%= inv.quotation_reference %></td>
+        <td><%= inv.item_name %></td>
+        <td><%= inv.price %></td>
+        <td><%= inv.quantity %></td>
+        <td><%= link_to 'Show', inv %></td>
+        <td><%= link_to 'Edit', edit_inv_path(inv) %></td>
+        <td><%= link_to 'Destroy', inv, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Inv', new_inv_path %>
